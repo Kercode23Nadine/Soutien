@@ -83,10 +83,13 @@
 
     <!-- javascript part -->
     <script type="text/javascript">
-        // variable déclarer qui stock Id number pour click
-        
+        // fonction afficherMessage declacher au click
         function afficherMessage() {
-            // j'ai deplacer ma variable numberA 
+            /* j'ai deplacer ma variable numberA pour l'intégrer dans la fonction qui demarre au click et ainsi 
+            *  recuperer la fonction 'value'
+            *
+            *  variable déclarer qui stock Id valeur de numberA pour le click
+            */
             let numberA = document.getElementById("number").value;
             // si , conditions  valeurs 10<number<100 
             if ((numberA < 10) || (numberA > 100)) {

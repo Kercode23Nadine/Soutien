@@ -100,28 +100,32 @@
         // on fait la multiplication 
         function multiply(nbrA, nbrB) {
             return nbrA * nbrB
-            
+
         }
         // code here for the function that is called on 'click'
         function calculerProduit() {
-            // on declare les variable pour chaque nombre en lui indiquant quel sera un nombre decimal(parsefloat)
+            // on declare les variable pour chaque nombre en lui indiquant qu'il sera un nombre decimal(parsefloat)
             let nbrA = parseFloat(document.getElementById("number-A").value);
             let nbrB = parseFloat(document.getElementById("number-B").value);
-            // si different d'un nombre 
-            if (isNaN(nbrA) || isNaN(nbrB)) {
+            // si A et B ne sont pas des nombres , on envoie alert.
+            if (isNaN(nbrA) && isNaN(nbrB))
                 // on envoie un message alert :Erreur...
-                alert("Erreur de saisie");
-                return
-
-            }
-            // appel de multiply pour faire le calcul
+                alert("Erreur de saisie")
+            else if (isNaN(nbrA) && isNaN(nbrB))
+                alert("La valeur A et le B n'est pas un nombre")
+            else if (isNaN(nbrA))
+                alert("La valeur de A n'est pas un nombre ")
+            else if (isNaN(nbrB))
+                alert("La valeur de B n'est pas un nombre ")
+            else
+            // appel de "multiply" pour faire le calcul de nbrA*nbrB ( multiplication)
             Result = multiply(nbrA, nbrB)
             // appel de la fonction display du tools.js pour afficher resultat
-            displayResult('Votre résultat', Result)
-            
+            displayResult('Votre résultat est : ', Result)
+
         }
     </script>
 
 </body>
-
 </html>
+
